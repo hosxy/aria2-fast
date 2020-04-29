@@ -5,7 +5,7 @@
  # $ sudo docker rm -v $id
  
 -FROM ubuntu:19.04
-+FROM ubuntu:latest
++FROM ubuntu:18.04
  
  MAINTAINER Tatsuhiro Tsujikawa
  
