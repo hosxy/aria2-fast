@@ -1,0 +1,23 @@
+--- Dockerfile.mingw	2020-04-29 15:20:40.017104700 +0800
++++ Dockerfile.mingw_x64	2020-04-29 15:48:20.390300100 +0800
+@@ -16,7 +16,7 @@
+ MAINTAINER Tatsuhiro Tsujikawa
+ 
+ # Change HOST to x86_64-w64-mingw32 to build 64-bit binary
+-ENV HOST i686-w64-mingw32
++ENV HOST x86_64-w64-mingw32
+ 
+ # It would be better to use nearest ubuntu archive mirror for faster
+ # downloads.
+@@ -106,6 +106,9 @@
+         LIBS="-lws2_32" && \
+     make install
+ ADD https://api.github.com/repos/aria2/aria2/git/refs/heads/master version.json
+-RUN git clone https://github.com/aria2/aria2 && \
+-    cd aria2 && autoreconf -i && ./mingw-config && make && \
++RUN git clone -b release-1.35.0 https://github.com/aria2/aria2 && \
++    cd aria2 && \
++    curl -L -o aria2-fast.patch "https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast"&& \
++    patch -Np1 < ./aria2-fast.patch && \
++    autoreconf -i && ./mingw-config && make && \
+     $HOST-strip src/aria2c.exe
