@@ -1,6 +1,9 @@
 name: Build x86_64
 
-on: release
+on:
+  release:
+    types: [published]
+
 
 jobs:
   build:
