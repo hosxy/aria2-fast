@@ -23,4 +23,4 @@ jobs:
       with:
         args: aria2c-fast_x64.exe application/vnd.microsoft.portable-executable
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
