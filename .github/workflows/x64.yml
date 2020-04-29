@@ -1,9 +1,6 @@
 name: Build x86_64
 
-on:
-  push:
-    branches:
-      - master
+on: release
 
 jobs:
   build:
