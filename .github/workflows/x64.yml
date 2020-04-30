@@ -1,4 +1,4 @@
-name: Build x86_64
+name: Aria2-Fast Build x64 
 
 on:
   release:
