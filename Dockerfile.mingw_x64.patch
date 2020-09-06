@@ -26,4 +26,4 @@
 +    patch -Np1 < ../aria2-fast.patch && \
 +    autoreconf -i && ./mingw-config && make && \
      $HOST-strip src/aria2c.exe
-
+     
