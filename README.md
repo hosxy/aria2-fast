@@ -7,9 +7,9 @@
 + `min-split-size` 默认为1M，最小可设置为1k
 
 解释下参数含义：
-+ piece-length：多线程分割文件时，每个线程分割的文件大小是这个数值的倍数。
-+ min-split-size：多线程分割文件时，每个线程最小的分割文件大小，受 `piece-length` 限制，不能比 `piece-length` 更小。
-+ max-connection-per-server：单服务器连接数，也就是常说的线程数，受 `min-split-size` 限制，实际线程数不大于 `文件大小/min-split-size`。
++ `piece-length`：多线程分割文件时，每个线程分割的文件大小是这个数值的倍数。
++ `min-split-size`：多线程分割文件时，每个线程最小的分割文件大小，受 `piece-length` 限制，不能比 `piece-length` 更小。
++ `max-connection-per-server`：单服务器连接数，也就是常说的线程数，受 `min-split-size` 限制，实际线程数不大于 `文件大小/min-split-size`。
 
 补丁修改自 AUR(ArchLinux User Repository): https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast
 
