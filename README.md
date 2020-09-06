@@ -1,6 +1,10 @@
 # Aria2 Fast
 
-解除官方 Aria2 最高 16 线程的限制，仅适用于 64 位 Windows
+解除线程限制，仅适用于 64 位 Windows <br>
+修改如下：
++ 解除 16 线程限制
++ piece-length 最小可设置为1k，默认为1M
++ min-split-size 最小可设置1K，默认为1M
 
-补丁取自 AUR(ArchLinux User Repository): https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast
+补丁修改自 AUR(ArchLinux User Repository): https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast
 
