@@ -3,8 +3,8 @@
 ### 解除线程限制，仅适用于 64 位 Windows <br>
 修改如下：
 + `max-connection-per-server` 默认为128，最大可能为 4294967295 (不确定)
-+ `piece-length` 默认为1M，最小可设置为1k
-+ `min-split-size` 默认为1M，最小可设置为1k
++ `piece-length` 默认为1M，最小可设置为1K
++ `min-split-size` 默认为1M，最小可设置为1K
 
 解释下参数含义：
 + `piece-length`：多线程分割文件时，每个线程分割的文件大小是这个数值的倍数。
