@@ -23,8 +23,7 @@
 -    cd aria2 && autoreconf -i && ./mingw-config && make && \
 +RUN git clone -b release-1.35.0 https://github.com/aria2/aria2 && \
 +    cd aria2 && \
-+    curl -L -o aria2-fast.patch "https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast"&& \
-+    patch -Np1 < ./aria2-fast.patch && \
++    patch -Np1 < ../aria2-fast.patch && \
 +    autoreconf -i && ./mingw-config && make && \
      $HOST-strip src/aria2c.exe
 
