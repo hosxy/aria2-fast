@@ -13,7 +13,7 @@ jobs:
     - name: build arai2c.exe
       run: |
         curl -L -o Dockerfile.mingw "https://raw.githubusercontent.com/aria2/aria2/master/Dockerfile.mingw"
-        patch Dockerfile.mingw < Dockerfile.mingw_x64.patch
+        bash patch_dockerfile.sh
         sudo docker build -t aria2-mingw - < Dockerfile.mingw
         id=$(sudo docker create aria2-mingw)
         sudo docker cp $id:/aria2/src/aria2c.exe ./aria2c-fast_x64.exe
